@@ -1,4 +1,5 @@
 import unittest
+import copy
 from snail import Snail
 
 
@@ -36,14 +37,25 @@ class SnailTest(unittest.TestCase):
         snail = Snail()
         self.assertEqual(out_matrix, snail._get_submatrix_without_perimeter(in_matrix))
 
-    def test_update_submatrix_in_matrix(self):
-        pass
+    def test_update_submatrix_in_matrix_size_3_and_submatrix_size_1(self):
+        out_matrix = [
+            [0, 2, 6],
+            [0, 9, 8],
+            [0, 6, 10]
+        ]
+        in_matrix = copy.deepcopy(out_matrix)
+        in_matrix[1][1] = 1
+        in_submatrix = [[9]]
+        snail = Snail()
+        self.assertEqual(out_matrix, snail._update_submatrix_in_matrix(in_matrix, in_submatrix))
+
 
     def test_update_perimetr_with_matrix_size_1(self):
         in_matrix = [[1]]
         start_multiply = 2
+        out_result = ([[2]], 3)
         snail = Snail()
-        self.assertEqual(([[2]], 3), snail._update_perimeter(in_matrix, start_multiply))
+        self.assertEqual(out_result, snail._update_perimeter(in_matrix, start_multiply))
 
 
 if __name__ == '__main__':
