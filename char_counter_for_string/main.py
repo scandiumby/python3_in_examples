@@ -1,13 +1,17 @@
+# Python3.8 tested
 def get_count_each_chars_in_string(input_string: str) -> dict:
     result = dict.fromkeys(set(input_string), 0)
     for char in input_string:
         result[char] += 1
     return result
 
+
+# Python3.8 tested
 def get_count_unique_chars_in_string(input_string: str) -> int:
     return len(set(input_string))
 
 
+# Python3.8 tested
 def get_russian_chars_not_included_in_string(input_string: str) -> set:
     russian_alphabet = {chr(char_code) for char_code in range(0x410, 0x450)}
     russian_alphabet.update(('Ё', 'ё'))
