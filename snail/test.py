@@ -3,6 +3,7 @@ import copy
 from snail import Snail
 
 
+# Python3.8 tested
 class SnailTest(unittest.TestCase):
     def test_solution_1_matrix_size_1(self):
         in_matrix = [[0]]

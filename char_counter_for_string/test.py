@@ -3,6 +3,7 @@ from unittest import TestCase
 from char_counter_for_string.main import *
 
 
+# Python3.8 tested
 class CharCounterTest(TestCase):
     string_standart = 'аааБББрСя'
     russian_alphabet = 'АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя'
